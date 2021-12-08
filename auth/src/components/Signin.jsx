@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Signin = () => {
+const Signin = ({ onSignIn }) => {
   return (
     <div className="d-flex justify-content-center">
       <div className="col-12 col-md-3 col-lg-3">
@@ -17,7 +17,13 @@ const Signin = () => {
               </div>
 
               <div className="d-grid">
-                <button type="submit" className="btn btn-primary">Login</button>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  onClick={onSignIn}
+                >
+                  Login
+                </button>
               </div>
             </form>
 

@@ -6,10 +6,16 @@ const packageJson = require('../package.json')
 
 const devConfig = {
   mode: 'development',
+  output: {
+    publicPath: 'http://localhost:3002/',
+  },
   devServer: {
     port: 3002,
     historyApiFallback: {
-      index: 'index.html'
+      index: 'index.html',
+    },
+    headers: {
+      'Access-Control-Allow-Origin': '*',
     },
   },
   plugins: [
@@ -22,9 +28,9 @@ const devConfig = {
       shared: packageJson.dependencies,
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html'
-    })
-  ]
+      template: './public/index.html',
+    }),
+  ],
 }
 
 module.exports = merge(commonConfig, devConfig)

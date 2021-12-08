@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { mount } from 'products/ProductsApp'
+import { mount } from 'dashboard/DashboardApp'
 import { useHistory } from 'react-router-dom'
 
 const ProductsApp = () => {

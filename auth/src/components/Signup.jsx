@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Signup = () => {
+const Signup = ({ onSignIn }) => {
   return (
     <div className="d-flex justify-content-center">
       <div className="col-12 col-md-3">
@@ -27,7 +27,13 @@ const Signup = () => {
               </div>
 
               <div className="text-end">
-                <button type="submit" className="btn btn-primary">Sign Up</button>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  onClick={onSignIn}
+                >
+                  Sign Up
+                </button>
               </div>
             </form>
           </div>
